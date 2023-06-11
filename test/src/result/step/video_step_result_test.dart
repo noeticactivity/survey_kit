@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import '/src/result/step/video_step_result.dart';
-import '/survey_kit.dart';
+import 'package:amorc_survey_kit_local/src/result/step/video_step_result.dart';
+import 'package:amorc_survey_kit_local/survey_kit.dart';
 
 void main() {
   final tResult = VideoStepResult(

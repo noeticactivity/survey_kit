@@ -2,7 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import '/src/answer_format/multiple_choice_auto_complete_answer_format.dart';
-import '/survey_kit.dart';
+import 'package:amorc_survey_kit_local/survey_kit.dart';
 
 class MultipleChoiceAutoCompleteAnswerView extends StatefulWidget {
   final QuestionStep questionStep;

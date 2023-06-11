@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import '/survey_kit.dart';
+import 'package:amorc_survey_kit_local/survey_kit.dart';
 
 void main() {
   test('identifier created by json is the same as created by code', () {
