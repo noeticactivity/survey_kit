@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:survey_kit/src/controller/survey_controller.dart';
-import 'package:survey_kit/src/result/question_result.dart';
-import 'package:survey_kit/src/steps/step.dart' as surveystep;
+import '/src/controller/survey_controller.dart';
+import '/src/result/question_result.dart';
+import '/src/steps/step.dart' as surveystep;
 
 class StepView extends StatelessWidget {
   final surveystep.Step step;

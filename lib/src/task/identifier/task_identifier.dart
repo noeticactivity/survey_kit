@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:survey_kit/src/steps/identifier/identifier.dart';
+import '/src/steps/identifier/identifier.dart';
 
 part 'task_identifier.g.dart';
 

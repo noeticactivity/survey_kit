@@ -1,11 +1,11 @@
-import 'package:survey_kit/src/navigator/rules/conditional_navigation_rule.dart';
-import 'package:survey_kit/src/navigator/rules/direct_navigation_rule.dart';
-import 'package:survey_kit/src/navigator/rules/navigation_rule.dart';
-import 'package:survey_kit/src/navigator/task_navigator.dart';
-import 'package:survey_kit/src/result/question_result.dart';
-import 'package:survey_kit/src/steps/step.dart';
-import 'package:survey_kit/src/task/navigable_task.dart';
-import 'package:survey_kit/src/task/task.dart';
+import '/src/navigator/rules/conditional_navigation_rule.dart';
+import '/src/navigator/rules/direct_navigation_rule.dart';
+import '/src/navigator/rules/navigation_rule.dart';
+import '/src/navigator/task_navigator.dart';
+import '/src/result/question_result.dart';
+import '/src/steps/step.dart';
+import '/src/task/navigable_task.dart';
+import '/src/task/task.dart';
 
 class NavigableTaskNavigator extends TaskNavigator {
   NavigableTaskNavigator(Task task) : super(task);

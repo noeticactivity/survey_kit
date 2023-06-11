@@ -1,6 +1,6 @@
-import 'package:survey_kit/src/answer_format/text_choice.dart';
-import 'package:survey_kit/src/steps/identifier/identifier.dart';
-import 'package:survey_kit/src/result/question_result.dart';
+import '/src/answer_format/text_choice.dart';
+import '/src/steps/identifier/identifier.dart';
+import '/src/result/question_result.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 

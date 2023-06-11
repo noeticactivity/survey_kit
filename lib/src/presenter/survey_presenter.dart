@@ -1,14 +1,14 @@
 import 'package:collection/collection.dart' show IterableExtension;
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:survey_kit/src/configuration/app_bar_configuration.dart';
-import 'package:survey_kit/src/navigator/task_navigator.dart';
-import 'package:survey_kit/src/presenter/survey_event.dart';
-import 'package:survey_kit/src/presenter/survey_state.dart';
-import 'package:survey_kit/src/result/question_result.dart';
-import 'package:survey_kit/src/result/step_result.dart';
-import 'package:survey_kit/src/result/survey/survey_result.dart';
-import 'package:survey_kit/src/steps/step.dart';
-import 'package:survey_kit/src/steps/identifier/step_identifier.dart';
+import '/src/configuration/app_bar_configuration.dart';
+import '/src/navigator/task_navigator.dart';
+import '/src/presenter/survey_event.dart';
+import '/src/presenter/survey_state.dart';
+import '/src/result/question_result.dart';
+import '/src/result/step_result.dart';
+import '/src/result/survey/survey_result.dart';
+import '/src/steps/step.dart';
+import '/src/steps/identifier/step_identifier.dart';
 
 //TO DO: Extract gathering of the results into another class
 class SurveyPresenter extends Bloc<SurveyEvent, SurveyState> {
@@ -22,39 +22,31 @@ class SurveyPresenter extends Bloc<SurveyEvent, SurveyState> {
     required this.taskNavigator,
     required this.onResult,
   }) : super(LoadingSurveyState()) {
-
-    on<StartSurvey>((event, emit){
-      emit(
-        _handleInitialStep()
-      );
+    on<StartSurvey>((event, emit) {
+      emit(_handleInitialStep());
     });
 
-    on<NextStep>((event, emit){
-      if (state is PresentingSurveyState){
+    on<NextStep>((event, emit) {
+      if (state is PresentingSurveyState) {
         emit(_handleNextStep(event, state as PresentingSurveyState));
       }
     });
 
-    on<StepBack>((event, emit){
-      if (state is PresentingSurveyState){
-        emit(
-          _handleStepBack(event, state as PresentingSurveyState)
-        );
+    on<StepBack>((event, emit) {
+      if (state is PresentingSurveyState) {
+        emit(_handleStepBack(event, state as PresentingSurveyState));
       }
     });
 
-    on<CloseSurvey>((event, emit){
-      if (state is PresentingSurveyState){
-        emit(
-          _handleClose(event, state as PresentingSurveyState)
-        );
+    on<CloseSurvey>((event, emit) {
+      if (state is PresentingSurveyState) {
+        emit(_handleClose(event, state as PresentingSurveyState));
       }
     });
 
     this.startDate = DateTime.now();
     add(StartSurvey());
   }
-
 
   SurveyState _handleInitialStep() {
     Step? step = taskNavigator.firstStep();

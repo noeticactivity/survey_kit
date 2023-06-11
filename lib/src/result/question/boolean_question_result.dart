@@ -1,6 +1,6 @@
-import 'package:survey_kit/src/answer_format/boolean_answer_format.dart';
-import 'package:survey_kit/src/steps/identifier/identifier.dart';
-import 'package:survey_kit/src/result/question_result.dart';
+import '/src/answer_format/boolean_answer_format.dart';
+import '/src/steps/identifier/identifier.dart';
+import '/src/result/question_result.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
@@ -22,7 +22,8 @@ class BooleanQuestionResult extends QuestionResult<BooleanResult?> {
           result: result,
         );
 
-  factory BooleanQuestionResult.fromJson(Map<String, dynamic> json) => _$BooleanQuestionResultFromJson(json);
+  factory BooleanQuestionResult.fromJson(Map<String, dynamic> json) =>
+      _$BooleanQuestionResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$BooleanQuestionResultToJson(this);
 

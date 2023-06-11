@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:survey_kit/src/answer_format/text_answer_format.dart';
-import 'package:survey_kit/src/result/question/text_question_result.dart';
-import 'package:survey_kit/src/steps/predefined_steps/question_step.dart';
-import 'package:survey_kit/src/views/decoration/input_decoration.dart';
-import 'package:survey_kit/src/views/widget/step_view.dart';
+import '/src/answer_format/text_answer_format.dart';
+import '/src/result/question/text_question_result.dart';
+import '/src/steps/predefined_steps/question_step.dart';
+import '/src/views/decoration/input_decoration.dart';
+import '/src/views/widget/step_view.dart';
 
 class TextAnswerView extends StatefulWidget {
   final QuestionStep questionStep;

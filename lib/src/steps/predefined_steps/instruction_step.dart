@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:survey_kit/src/result/question_result.dart';
-import 'package:survey_kit/src/steps/step.dart';
-import 'package:survey_kit/src/steps/identifier/step_identifier.dart';
-import 'package:survey_kit/src/views/instruction_view.dart';
+import '/src/result/question_result.dart';
+import '/src/steps/step.dart';
+import '/src/steps/identifier/step_identifier.dart';
+import '/src/views/instruction_view.dart';
 
 part 'instruction_step.g.dart';
 

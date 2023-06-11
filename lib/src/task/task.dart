@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:survey_kit/src/steps/step.dart';
-import 'package:survey_kit/src/task/identifier/task_identifier.dart';
-import 'package:survey_kit/src/task/navigable_task.dart';
-import 'package:survey_kit/src/task/ordered_task.dart';
-import 'package:survey_kit/src/task/task_not_defined_exception.dart';
+import '/src/steps/step.dart';
+import '/src/task/identifier/task_identifier.dart';
+import '/src/task/navigable_task.dart';
+import '/src/task/ordered_task.dart';
+import '/src/task/task_not_defined_exception.dart';
 
 /// Abstract definition of survey task
 ///

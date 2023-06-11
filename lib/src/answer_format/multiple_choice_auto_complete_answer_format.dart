@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:survey_kit/src/answer_format/answer_format.dart';
-import 'package:survey_kit/src/answer_format/text_choice.dart';
+import '/src/answer_format/answer_format.dart';
+import '/src/answer_format/text_choice.dart';
 
 part 'multiple_choice_auto_complete_answer_format.g.dart';
 

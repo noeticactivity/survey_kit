@@ -1,8 +1,8 @@
-import 'package:survey_kit/src/navigator/rules/navigation_rule.dart';
-import 'package:survey_kit/src/steps/step.dart';
-import 'package:survey_kit/src/steps/identifier/step_identifier.dart';
-import 'package:survey_kit/src/task/task.dart';
-import 'package:survey_kit/src/task/identifier/task_identifier.dart';
+import '/src/navigator/rules/navigation_rule.dart';
+import '/src/steps/step.dart';
+import '/src/steps/identifier/step_identifier.dart';
+import '/src/task/task.dart';
+import '/src/task/identifier/task_identifier.dart';
 
 /// Definition of task which can handle routing between [Tasks]
 ///

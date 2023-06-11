@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:survey_kit/survey_kit.dart';
+import '/survey_kit.dart';
 
 void main() {
   final tResult = TimeQuestionResult(

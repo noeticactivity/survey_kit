@@ -1,5 +1,5 @@
-import 'package:survey_kit/src/result/question_result.dart';
-import 'package:survey_kit/src/steps/identifier/identifier.dart';
+import '/src/result/question_result.dart';
+import '/src/steps/identifier/identifier.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
@@ -21,7 +21,8 @@ class DateQuestionResult extends QuestionResult<DateTime?> {
           result: result,
         );
 
-  factory DateQuestionResult.fromJson(Map<String, dynamic> json) => _$DateQuestionResultFromJson(json);
+  factory DateQuestionResult.fromJson(Map<String, dynamic> json) =>
+      _$DateQuestionResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$DateQuestionResultToJson(this);
 

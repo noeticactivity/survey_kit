@@ -1,5 +1,5 @@
-import 'package:survey_kit/src/result/result.dart';
-import 'package:survey_kit/src/steps/identifier/identifier.dart';
+import '/src/result/result.dart';
+import '/src/steps/identifier/identifier.dart';
 
 abstract class QuestionResult<T> extends Result {
   final T? result;

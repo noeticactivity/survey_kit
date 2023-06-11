@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:survey_kit/survey_kit.dart';
+import '/survey_kit.dart';
 
 void main() {
   final tResult = InstructionStepResult(
@@ -11,7 +11,7 @@ void main() {
   group('serialisation', () {
     test(
       'should work with valid example',
-          () async {
+      () async {
         final encodedResult = tResult.toJson();
         final decodedResult = InstructionStepResult.fromJson(encodedResult);
         expect(tResult, decodedResult);

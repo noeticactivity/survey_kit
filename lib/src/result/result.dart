@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:survey_kit/src/steps/identifier/identifier.dart';
+import '/src/steps/identifier/identifier.dart';
 
 abstract class Result extends Equatable {
   final Identifier? id;

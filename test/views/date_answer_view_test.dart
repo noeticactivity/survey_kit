@@ -3,11 +3,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
-import 'package:survey_kit/src/answer_format/date_answer_format.dart';
-import 'package:survey_kit/src/controller/survey_controller.dart';
-import 'package:survey_kit/src/steps/predefined_steps/question_step.dart';
-import 'package:survey_kit/src/views/date_answer_view.dart';
-import 'package:survey_kit/src/widget/survey_progress_configuration.dart';
+import '/src/answer_format/date_answer_format.dart';
+import '/src/controller/survey_controller.dart';
+import '/src/steps/predefined_steps/question_step.dart';
+import '/src/views/date_answer_view.dart';
+import '/src/widget/survey_progress_configuration.dart';
 
 void main() {
   DateAnswerView _validDateAnswerView() => DateAnswerView(

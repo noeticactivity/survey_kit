@@ -1,5 +1,5 @@
-import 'package:survey_kit/src/steps/identifier/identifier.dart';
-import 'package:survey_kit/src/result/question_result.dart';
+import '/src/steps/identifier/identifier.dart';
+import '/src/result/question_result.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
@@ -21,7 +21,8 @@ class IntegerQuestionResult extends QuestionResult<int?> {
           result: result,
         );
 
-  factory IntegerQuestionResult.fromJson(Map<String, dynamic> json) => _$IntegerQuestionResultFromJson(json);
+  factory IntegerQuestionResult.fromJson(Map<String, dynamic> json) =>
+      _$IntegerQuestionResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$IntegerQuestionResultToJson(this);
 

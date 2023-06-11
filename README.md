@@ -73,7 +73,7 @@ flutter pub get
 
 ## 3. Import it
 ```dart
-import 'package:survey_kit/survey_kit.dart';
+import '/survey_kit.dart';
 ```
 
 # 💻 Usage

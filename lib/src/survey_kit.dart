@@ -2,19 +2,19 @@ import 'package:collection/collection.dart' show IterableExtension;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'package:survey_kit/src/configuration/app_bar_configuration.dart';
-import 'package:survey_kit/src/controller/survey_controller.dart';
-import 'package:survey_kit/src/navigator/navigable_task_navigator.dart';
-import 'package:survey_kit/src/navigator/ordered_task_navigator.dart';
-import 'package:survey_kit/src/navigator/task_navigator.dart';
-import 'package:survey_kit/src/presenter/survey_presenter.dart';
-import 'package:survey_kit/src/presenter/survey_state.dart';
-import 'package:survey_kit/src/result/survey/survey_result.dart';
-import 'package:survey_kit/src/task/navigable_task.dart';
-import 'package:survey_kit/src/task/ordered_task.dart';
-import 'package:survey_kit/src/task/task.dart';
-import 'package:survey_kit/src/views/widget/survey_app_bar.dart';
-import 'package:survey_kit/src/widget/survey_progress_configuration.dart';
+import '/src/configuration/app_bar_configuration.dart';
+import '/src/controller/survey_controller.dart';
+import '/src/navigator/navigable_task_navigator.dart';
+import '/src/navigator/ordered_task_navigator.dart';
+import '/src/navigator/task_navigator.dart';
+import '/src/presenter/survey_presenter.dart';
+import '/src/presenter/survey_state.dart';
+import '/src/result/survey/survey_result.dart';
+import '/src/task/navigable_task.dart';
+import '/src/task/ordered_task.dart';
+import '/src/task/task.dart';
+import '/src/views/widget/survey_app_bar.dart';
+import '/src/widget/survey_progress_configuration.dart';
 
 class SurveyKit extends StatefulWidget {
   /// [Task] for the configuraton of the survey

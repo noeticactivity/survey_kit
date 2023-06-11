@@ -1,6 +1,6 @@
-import 'package:survey_kit/src/answer_format/multi_double.dart';
-import 'package:survey_kit/src/steps/identifier/identifier.dart';
-import 'package:survey_kit/src/result/question_result.dart';
+import '/src/answer_format/multi_double.dart';
+import '/src/steps/identifier/identifier.dart';
+import '/src/result/question_result.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
@@ -22,7 +22,8 @@ class MultipleDoubleQuestionResult extends QuestionResult<List<MultiDouble>?> {
           result: result,
         );
 
-  factory MultipleDoubleQuestionResult.fromJson(Map<String, dynamic> json) => _$MultipleDoubleQuestionResultFromJson(json);
+  factory MultipleDoubleQuestionResult.fromJson(Map<String, dynamic> json) =>
+      _$MultipleDoubleQuestionResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$MultipleDoubleQuestionResultToJson(this);
 

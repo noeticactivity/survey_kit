@@ -1,8 +1,8 @@
 import 'dart:collection';
 
-import 'package:survey_kit/src/result/question_result.dart';
-import 'package:survey_kit/src/steps/step.dart';
-import 'package:survey_kit/src/task/task.dart';
+import '/src/result/question_result.dart';
+import '/src/steps/step.dart';
+import '/src/task/task.dart';
 
 abstract class TaskNavigator {
   final Task task;
