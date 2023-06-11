@@ -1,18 +1,18 @@
 // Edited by Antonio Bruno, Giacomo Ignesti and Massimo Martinelli  2022
 
-import 'package:survey_kit/src/answer_format/boolean_answer_format.dart';
-import 'package:survey_kit/src/answer_format/date_answer_format.dart';
-import 'package:survey_kit/src/answer_format/double_answer_format.dart';
-import 'package:survey_kit/src/answer_format/multiple_choice_auto_complete_answer_format.dart';
-import 'package:survey_kit/src/answer_format/multiple_double_answer_format.dart';
-import 'package:survey_kit/src/answer_format/image_answer_format.dart';
-import 'package:survey_kit/src/answer_format/integer_answer_format.dart';
-import 'package:survey_kit/src/answer_format/multiple_choice_answer_format.dart';
-import 'package:survey_kit/src/answer_format/scale_answer_format.dart';
-import 'package:survey_kit/src/answer_format/single_choice_answer_format.dart';
-import 'package:survey_kit/src/answer_format/text_answer_format.dart';
-import 'package:survey_kit/src/answer_format/time_answer_formart.dart';
-import 'package:survey_kit/src/steps/predefined_steps/answer_format_not_defined_exception.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/boolean_answer_format.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/date_answer_format.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/double_answer_format.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/multiple_choice_auto_complete_answer_format.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/multiple_double_answer_format.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/image_answer_format.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/integer_answer_format.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/multiple_choice_answer_format.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/scale_answer_format.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/single_choice_answer_format.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/text_answer_format.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/time_answer_formart.dart';
+import 'package:amorc_survey_kit_local/src/steps/predefined_steps/answer_format_not_defined_exception.dart';
 
 abstract class AnswerFormat {
   const AnswerFormat();

@@ -1,26 +1,23 @@
+import 'package:amorc_survey_kit_local/src/CustomSteps/text_and_audio_question_result.dart';
+import 'package:amorc_survey_kit_local/survey_kit.dart'; //TODO: See if the full surver_kit.dart import is superflous or excessive
 import 'package:flutter/material.dart';
-import 'package:amorc_survey_kit_local/src/answer_format/text_answer_format.dart';
-import 'package:amorc_survey_kit_local/src/result/question/text_question_result.dart';
-import 'package:amorc_survey_kit_local/src/steps/predefined_steps/question_step.dart';
-import 'package:amorc_survey_kit_local/src/views/decoration/input_decoration.dart';
-import 'package:amorc_survey_kit_local/src/views/widget/step_view.dart';
 
-class TextAnswerView extends StatefulWidget {
+class TextAndAudioAnswerView extends StatefulWidget {
   final QuestionStep questionStep;
-  final TextQuestionResult? result;
+  final TextAndAudioQuestionResult? result;
 
-  const TextAnswerView({
+  const TextAndAudioAnswerView({
     Key? key,
     required this.questionStep,
     required this.result,
   }) : super(key: key);
 
   @override
-  _TextAnswerViewState createState() => _TextAnswerViewState();
+  _TextAndAudioAnswerViewState createState() => _TextAndAudioAnswerViewState();
 }
 
-class _TextAnswerViewState extends State<TextAnswerView> {
-  late final TextAnswerFormat _textAnswerFormat;
+class _TextAndAudioAnswerViewState extends State<TextAndAudioAnswerView> {
+  late final TextAndAudioChoiceAnswerFormat _textAnswerFormat;
   late final DateTime _startDate;
 
   late final TextEditingController _controller;
@@ -30,8 +27,9 @@ class _TextAnswerViewState extends State<TextAnswerView> {
   void initState() {
     super.initState();
     _controller = TextEditingController();
-    _controller.text = widget.result?.result ?? '';
-    _textAnswerFormat = widget.questionStep.answerFormat as TextAnswerFormat;
+    _controller.text = widget.result?.result?.toString() ?? '';
+    _textAnswerFormat =
+        widget.questionStep.answerFormat as TextAndAudioChoiceAnswerFormat;
     _checkValidation(_controller.text);
     _startDate = DateTime.now();
   }

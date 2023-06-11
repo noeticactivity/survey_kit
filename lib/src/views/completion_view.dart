@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:survey_kit/src/result/step/completion_step_result.dart';
-import 'package:survey_kit/src/steps/predefined_steps/completion_step.dart';
-import 'package:survey_kit/src/views/widget/step_view.dart';
+import 'package:amorc_survey_kit_local/src/result/step/completion_step_result.dart';
+import 'package:amorc_survey_kit_local/src/steps/predefined_steps/completion_step.dart';
+import 'package:amorc_survey_kit_local/src/views/widget/step_view.dart';
 
 class CompletionView extends StatelessWidget {
   final CompletionStep completionStep;

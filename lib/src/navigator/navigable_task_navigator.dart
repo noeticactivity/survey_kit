@@ -1,11 +1,11 @@
-import 'package:survey_kit/src/navigator/rules/conditional_navigation_rule.dart';
-import 'package:survey_kit/src/navigator/rules/direct_navigation_rule.dart';
-import 'package:survey_kit/src/navigator/rules/navigation_rule.dart';
-import 'package:survey_kit/src/navigator/task_navigator.dart';
-import 'package:survey_kit/src/result/question_result.dart';
-import 'package:survey_kit/src/steps/step.dart';
-import 'package:survey_kit/src/task/navigable_task.dart';
-import 'package:survey_kit/src/task/task.dart';
+import 'package:amorc_survey_kit_local/src/navigator/rules/conditional_navigation_rule.dart';
+import 'package:amorc_survey_kit_local/src/navigator/rules/direct_navigation_rule.dart';
+import 'package:amorc_survey_kit_local/src/navigator/rules/navigation_rule.dart';
+import 'package:amorc_survey_kit_local/src/navigator/task_navigator.dart';
+import 'package:amorc_survey_kit_local/src/result/question_result.dart';
+import 'package:amorc_survey_kit_local/src/steps/step.dart';
+import 'package:amorc_survey_kit_local/src/task/navigable_task.dart';
+import 'package:amorc_survey_kit_local/src/task/task.dart';
 
 class NavigableTaskNavigator extends TaskNavigator {
   NavigableTaskNavigator(Task task) : super(task);

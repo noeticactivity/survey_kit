@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:survey_kit/src/answer_format/answer_format.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/answer_format.dart';
 
 part 'time_answer_formart.g.dart';
 

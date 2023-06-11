@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:survey_kit/src/result/step/instruction_step_result.dart';
-import 'package:survey_kit/src/steps/predefined_steps/instruction_step.dart';
-import 'package:survey_kit/src/views/widget/step_view.dart';
+import 'package:amorc_survey_kit_local/src/result/step/instruction_step_result.dart';
+import 'package:amorc_survey_kit_local/src/steps/predefined_steps/instruction_step.dart';
+import 'package:amorc_survey_kit_local/src/views/widget/step_view.dart';
 
 class InstructionView extends StatelessWidget {
   final InstructionStep instructionStep;

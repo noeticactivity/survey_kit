@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:survey_kit/src/result/question_result.dart';
-import 'package:survey_kit/src/steps/step.dart';
-import 'package:survey_kit/src/steps/identifier/step_identifier.dart';
-import 'package:survey_kit/src/views/instruction_view.dart';
+import 'package:amorc_survey_kit_local/src/result/question_result.dart';
+import 'package:amorc_survey_kit_local/src/steps/step.dart';
+import 'package:amorc_survey_kit_local/src/steps/identifier/step_identifier.dart';
+import 'package:amorc_survey_kit_local/src/views/instruction_view.dart';
 
 part 'instruction_step.g.dart';
 

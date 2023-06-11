@@ -1,5 +1,5 @@
-import 'package:survey_kit/src/steps/identifier/identifier.dart';
-import 'package:survey_kit/src/result/question_result.dart';
+import 'package:amorc_survey_kit_local/src/steps/identifier/identifier.dart';
+import 'package:amorc_survey_kit_local/src/result/question_result.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
@@ -21,7 +21,8 @@ class TextQuestionResult extends QuestionResult<String?> {
           result: result,
         );
 
-  factory TextQuestionResult.fromJson(Map<String, dynamic> json) => _$TextQuestionResultFromJson(json);
+  factory TextQuestionResult.fromJson(Map<String, dynamic> json) =>
+      _$TextQuestionResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$TextQuestionResultToJson(this);
 

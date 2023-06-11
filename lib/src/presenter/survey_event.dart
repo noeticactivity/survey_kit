@@ -1,4 +1,4 @@
-import 'package:survey_kit/src/result/question_result.dart';
+import 'package:amorc_survey_kit_local/src/result/question_result.dart';
 
 abstract class SurveyEvent {
   const SurveyEvent();

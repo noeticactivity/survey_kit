@@ -1,4 +1,4 @@
-name: survey_kit
+name: amorc_survey_kit_local
 description: Create beautiful surveys with Flutter (inspired by iOS ResearchKit Surveys)
 version: 0.1.2
 homepage: https://quickbirdstudios.com
@@ -27,6 +27,7 @@ dependencies:
   provider: ^6.0.2
   uuid: ^3.0.4
   video_player: ^2.1.6
+  youtube_player_iframe: ^4.0.4
 
 dev_dependencies:
   build_runner: ^2.0.4
@@ -42,6 +43,7 @@ flutter:
   # To add assets to your plugin package, add an assets section, like this:
   assets:
     - assets/fancy_checkmark.json
+    - assets/AMORC_Symbol.png
   #
   # For details regarding assets in packages, see
   # https://flutter.dev/assets-and-images/#from-packages

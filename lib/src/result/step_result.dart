@@ -1,19 +1,19 @@
-import 'package:survey_kit/src/result/question/boolean_question_result.dart';
-import 'package:survey_kit/src/result/question/date_question_result.dart';
-import 'package:survey_kit/src/result/question/double_question_result.dart';
-import 'package:survey_kit/src/result/question/integer_question_result.dart';
-import 'package:survey_kit/src/result/question/multiple_choice_question_result.dart';
-import 'package:survey_kit/src/result/question/multiple_double_question_result.dart';
-import 'package:survey_kit/src/result/question/scale_question_result.dart';
-import 'package:survey_kit/src/result/question/single_choice_question_result.dart';
-import 'package:survey_kit/src/result/question/text_question_result.dart';
-import 'package:survey_kit/src/result/question/time_question_result.dart';
-import 'package:survey_kit/src/result/result.dart';
-import 'package:survey_kit/src/result/step/completion_step_result.dart';
-import 'package:survey_kit/src/result/step/instruction_step_result.dart';
-import 'package:survey_kit/src/result/step/video_step_result.dart';
-import 'package:survey_kit/src/steps/identifier/identifier.dart';
-import 'package:survey_kit/src/result/question_result.dart';
+import 'package:amorc_survey_kit_local/src/result/question/boolean_question_result.dart';
+import 'package:amorc_survey_kit_local/src/result/question/date_question_result.dart';
+import 'package:amorc_survey_kit_local/src/result/question/double_question_result.dart';
+import 'package:amorc_survey_kit_local/src/result/question/integer_question_result.dart';
+import 'package:amorc_survey_kit_local/src/result/question/multiple_choice_question_result.dart';
+import 'package:amorc_survey_kit_local/src/result/question/multiple_double_question_result.dart';
+import 'package:amorc_survey_kit_local/src/result/question/scale_question_result.dart';
+import 'package:amorc_survey_kit_local/src/result/question/single_choice_question_result.dart';
+import 'package:amorc_survey_kit_local/src/result/question/text_question_result.dart';
+import 'package:amorc_survey_kit_local/src/result/question/time_question_result.dart';
+import 'package:amorc_survey_kit_local/src/result/result.dart';
+import 'package:amorc_survey_kit_local/src/result/step/completion_step_result.dart';
+import 'package:amorc_survey_kit_local/src/result/step/instruction_step_result.dart';
+import 'package:amorc_survey_kit_local/src/result/step/video_step_result.dart';
+import 'package:amorc_survey_kit_local/src/steps/identifier/identifier.dart';
+import 'package:amorc_survey_kit_local/src/result/question_result.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 

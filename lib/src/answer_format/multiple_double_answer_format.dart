@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:survey_kit/src/answer_format/answer_format.dart';
-import 'package:survey_kit/src/answer_format/multi_double.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/answer_format.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/multi_double.dart';
 
 part 'multiple_double_answer_format.g.dart';
 

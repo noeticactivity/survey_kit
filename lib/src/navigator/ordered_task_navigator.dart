@@ -1,7 +1,7 @@
-import 'package:survey_kit/src/navigator/task_navigator.dart';
-import 'package:survey_kit/src/result/question_result.dart';
-import 'package:survey_kit/src/steps/step.dart';
-import 'package:survey_kit/src/task/task.dart';
+import 'package:amorc_survey_kit_local/src/navigator/task_navigator.dart';
+import 'package:amorc_survey_kit_local/src/result/question_result.dart';
+import 'package:amorc_survey_kit_local/src/steps/step.dart';
+import 'package:amorc_survey_kit_local/src/task/task.dart';
 
 class OrderedTaskNavigator extends TaskNavigator {
   OrderedTaskNavigator(Task task) : super(task);

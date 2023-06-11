@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:survey_kit/src/answer_format/integer_answer_format.dart';
-import 'package:survey_kit/src/result/question/integer_question_result.dart';
-import 'package:survey_kit/src/steps/predefined_steps/question_step.dart';
-import 'package:survey_kit/src/views/decoration/input_decoration.dart';
-import 'package:survey_kit/src/views/widget/step_view.dart';
+import 'package:amorc_survey_kit_local/src/answer_format/integer_answer_format.dart';
+import 'package:amorc_survey_kit_local/src/result/question/integer_question_result.dart';
+import 'package:amorc_survey_kit_local/src/steps/predefined_steps/question_step.dart';
+import 'package:amorc_survey_kit_local/src/views/decoration/input_decoration.dart';
+import 'package:amorc_survey_kit_local/src/views/widget/step_view.dart';
 
 class IntegerAnswerView extends StatefulWidget {
   final QuestionStep questionStep;

@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:survey_kit/src/steps/step.dart';
-import 'package:survey_kit/src/task/task.dart';
-import 'package:survey_kit/src/task/identifier/task_identifier.dart';
+import 'package:amorc_survey_kit_local/src/steps/step.dart';
+import 'package:amorc_survey_kit_local/src/task/task.dart';
+import 'package:amorc_survey_kit_local/src/task/identifier/task_identifier.dart';
 
 part 'ordered_task.g.dart';
 

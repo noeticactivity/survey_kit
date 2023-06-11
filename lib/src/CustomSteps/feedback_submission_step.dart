@@ -1,19 +1,15 @@
+import 'package:amorc_survey_kit_local/survey_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:amorc_survey_kit_local/src/controller/survey_controller.dart';
-import 'package:amorc_survey_kit_local/src/result/question_result.dart';
-import 'package:amorc_survey_kit_local/src/steps/step.dart' as surveystep;
 
-class StepView extends StatelessWidget {
-  final surveystep.Step step;
+class FeedBackSubmissionStepView extends StatelessWidget {
   final Widget title;
   final Widget child;
   final QuestionResult Function() resultFunction;
   final bool isValid;
   final SurveyController? controller;
 
-  const StepView({
-    required this.step,
+  const FeedBackSubmissionStepView({
     required this.child,
     required this.title,
     required this.resultFunction,
@@ -46,16 +42,12 @@ class StepView extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 32.0),
                   child: OutlinedButton(
-                    onPressed: isValid || step.isOptional
+                    onPressed: isValid //|| step.isOptional
                         ? () =>
                             surveyController.nextStep(context, resultFunction)
                         : null,
                     child: Text(
-                      step.buttonText?.toUpperCase() ??
-                          context
-                              .read<Map<String, String>?>()?['next']
-                              ?.toUpperCase() ??
-                          'Next',
+                      'Yes', //FIXME: LOCALIZE THIS
                       style: TextStyle(
                         color: isValid
                             ? Theme.of(context).primaryColor
@@ -64,6 +56,19 @@ class StepView extends StatelessWidget {
                     ),
                   ),
                 ),
+                OutlinedButton(
+                  onPressed: isValid //|| step.isOptional
+                      ? () => surveyController.nextStep(context, resultFunction)
+                      : null,
+                  child: Text(
+                    'No', //FIXME: LOCALIZE THIS
+                    style: TextStyle(
+                      color: isValid
+                          ? Theme.of(context).primaryColor
+                          : Colors.grey,
+                    ),
+                  ),
+                )
               ],
             ),
           ),

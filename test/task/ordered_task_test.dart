@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:survey_kit/survey_kit.dart';
+import 'package:amorc_survey_kit_local/survey_kit.dart';
 
 void main() {
   test('ordered task created by json is the same as created via code', () {

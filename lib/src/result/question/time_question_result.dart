@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:survey_kit/src/steps/identifier/identifier.dart';
-import 'package:survey_kit/src/result/question_result.dart';
+import 'package:amorc_survey_kit_local/src/steps/identifier/identifier.dart';
+import 'package:amorc_survey_kit_local/src/result/question_result.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
@@ -71,8 +71,7 @@ class TimeOfDayConverter extends JsonConverter<TimeOfDay?, String?> {
     }
 
     String _addLeadingZeroIfNeeded(int value) {
-      if (value < 10)
-        return '0$value';
+      if (value < 10) return '0$value';
       return value.toString();
     }
 

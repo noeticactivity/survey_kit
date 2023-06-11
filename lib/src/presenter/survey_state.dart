@@ -1,7 +1,7 @@
-import 'package:survey_kit/src/configuration/app_bar_configuration.dart';
-import 'package:survey_kit/src/result/question_result.dart';
-import 'package:survey_kit/src/result/survey/survey_result.dart';
-import 'package:survey_kit/src/steps/step.dart';
+import 'package:amorc_survey_kit_local/src/configuration/app_bar_configuration.dart';
+import 'package:amorc_survey_kit_local/src/result/question_result.dart';
+import 'package:amorc_survey_kit_local/src/result/survey/survey_result.dart';
+import 'package:amorc_survey_kit_local/src/steps/step.dart';
 
 abstract class SurveyState {
   const SurveyState();

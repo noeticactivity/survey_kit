@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:survey_kit/src/answer_format/time_answer_formart.dart';
-import 'package:survey_kit/src/result/question/time_question_result.dart';
-import 'package:survey_kit/src/steps/predefined_steps/question_step.dart';
-import 'package:survey_kit/src/views/widget/step_view.dart';
-import 'package:survey_kit/src/views/widget/time_picker_widget.dart'
+import 'package:amorc_survey_kit_local/src/answer_format/time_answer_formart.dart';
+import 'package:amorc_survey_kit_local/src/result/question/time_question_result.dart';
+import 'package:amorc_survey_kit_local/src/steps/predefined_steps/question_step.dart';
+import 'package:amorc_survey_kit_local/src/views/widget/step_view.dart';
+import 'package:amorc_survey_kit_local/src/views/widget/time_picker_widget.dart'
     as surveywidget;
 
 class TimeAnswerView extends StatefulWidget {

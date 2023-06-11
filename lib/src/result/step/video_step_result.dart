@@ -1,5 +1,5 @@
-import 'package:survey_kit/src/result/question_result.dart';
-import 'package:survey_kit/src/steps/identifier/identifier.dart';
+import 'package:amorc_survey_kit_local/src/result/question_result.dart';
+import 'package:amorc_survey_kit_local/src/steps/identifier/identifier.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
@@ -37,7 +37,6 @@ class VideoResult {
       _$VideoResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$VideoResultToJson(this);
-
 
   const VideoResult({
     required this.leftVideoAt,

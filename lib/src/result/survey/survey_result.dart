@@ -1,6 +1,6 @@
-import 'package:survey_kit/src/result/result.dart';
-import 'package:survey_kit/src/result/step_result.dart';
-import 'package:survey_kit/src/steps/identifier/identifier.dart';
+import 'package:amorc_survey_kit_local/src/result/result.dart';
+import 'package:amorc_survey_kit_local/src/result/step_result.dart';
+import 'package:amorc_survey_kit_local/src/steps/identifier/identifier.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
@@ -18,8 +18,9 @@ class SurveyResult extends Result {
     required this.finishReason,
     required this.results,
   }) : super(id: id, startDate: startDate, endDate: endDate);
-  
-  factory SurveyResult.fromJson(Map<String, dynamic> json) => _$SurveyResultFromJson(json);
+
+  factory SurveyResult.fromJson(Map<String, dynamic> json) =>
+      _$SurveyResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$SurveyResultToJson(this);
 

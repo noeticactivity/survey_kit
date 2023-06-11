@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:survey_kit/survey_kit.dart';
+import 'package:amorc_survey_kit_local/survey_kit.dart';
 
 void main() {
   final tResult = DateQuestionResult(
@@ -13,7 +13,7 @@ void main() {
   group('serialisation', () {
     test(
       'should work with valid example',
-          () async {
+      () async {
         final encodedResult = tResult.toJson();
         final decodedResult = DateQuestionResult.fromJson(encodedResult);
         expect(tResult, decodedResult);
