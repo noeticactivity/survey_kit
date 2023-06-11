@@ -33,7 +33,7 @@ class FeedbackSubmissionStep extends InstructionStep {
 class FeedbackSubmission extends material.StatelessWidget {
   final DateTime _startDate = DateTime.now();
 
-  FeedbackSubmission();
+  //FeedbackSubmission();
 
   @override
   material.Widget build(material.BuildContext context) {

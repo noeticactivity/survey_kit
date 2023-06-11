@@ -40,6 +40,24 @@ class FeedBackSubmissionStepView extends StatelessWidget {
                 ),
                 child,
                 Padding(
+                  padding: const EdgeInsets.only(top: 32.0),
+                  //padding: const EdgeInsets.symmetric(vertical: 32.0),
+                  child: OutlinedButton(
+                    onPressed: isValid //|| step.isOptional
+                        ? () =>
+                            surveyController.nextStep(context, resultFunction)
+                        : null,
+                    child: Text(
+                      'Text', //FIXME: LOCALIZE THIS
+                      style: TextStyle(
+                        color: isValid
+                            ? Theme.of(context).primaryColor
+                            : Colors.grey,
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
                   padding: const EdgeInsets.symmetric(vertical: 32.0),
                   child: OutlinedButton(
                     onPressed: isValid //|| step.isOptional
@@ -47,7 +65,7 @@ class FeedBackSubmissionStepView extends StatelessWidget {
                             surveyController.nextStep(context, resultFunction)
                         : null,
                     child: Text(
-                      'Yes', //FIXME: LOCALIZE THIS
+                      'Voice Note', //FIXME: LOCALIZE THIS
                       style: TextStyle(
                         color: isValid
                             ? Theme.of(context).primaryColor
@@ -61,14 +79,14 @@ class FeedBackSubmissionStepView extends StatelessWidget {
                       ? () => surveyController.nextStep(context, resultFunction)
                       : null,
                   child: Text(
-                    'No', //FIXME: LOCALIZE THIS
+                    'No, Thank You', //FIXME: LOCALIZE THIS
                     style: TextStyle(
                       color: isValid
                           ? Theme.of(context).primaryColor
                           : Colors.grey,
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),

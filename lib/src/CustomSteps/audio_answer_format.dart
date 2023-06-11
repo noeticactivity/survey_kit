@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:amorc_survey_kit_local/survey_kit.dart';
 
 @JsonSerializable()
-class TextAndAudioChoiceAnswerFormat implements AnswerFormat {
+class AudioChoiceAnswerFormat implements AnswerFormat {
   late String textInput; // Variable to store user's text input
 
   final int? maxLines;
@@ -17,7 +17,7 @@ class TextAndAudioChoiceAnswerFormat implements AnswerFormat {
   @JsonKey(defaultValue: '^(?!\s*\$).+')
   final String? validationRegEx;
 
-  TextAndAudioChoiceAnswerFormat({
+  AudioChoiceAnswerFormat({
     String textInput = '',
     this.maxLines,
     this.hint = '',
