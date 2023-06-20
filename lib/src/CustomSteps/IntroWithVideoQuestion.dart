@@ -82,14 +82,15 @@ class InstructionViewWithVideo extends material.StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          YoutubePlayer(
-            controller: _controller,
-            aspectRatio: 16 / 9,
-          ),
+          //FIXME: TEMP Removing the video
+          // YoutubePlayer(
+          //   controller: _controller,
+          //   aspectRatio: 16 / 9,
+          // ),
           material.Image.asset(
             'assets/AMORC_Symbol.png',
-            width: 100,
-            height: 150,
+            width: 200,
+            height: 300,
             //fit: BoxFit.cover,
           ),
           material.Expanded(

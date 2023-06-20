@@ -1,3 +1,6 @@
+import 'package:amorc_survey_kit_local/src/CustomSteps/audio_answer_format.dart';
+import 'package:amorc_survey_kit_local/src/CustomSteps/audio_answer_view.dart';
+import 'package:amorc_survey_kit_local/src/CustomSteps/audio_question_result.dart';
 import 'package:amorc_survey_kit_local/src/CustomSteps/text_and_audio_answer_format.dart';
 import 'package:amorc_survey_kit_local/src/CustomSteps/text_and_audio_answer_view.dart';
 import 'package:amorc_survey_kit_local/src/CustomSteps/text_and_audio_question_result.dart';
@@ -155,6 +158,12 @@ class QuestionStep extends Step {
           key: key,
           questionStep: this,
           result: questionResult as TextAndAudioQuestionResult?,
+        );
+      case AudioChoiceAnswerFormat:
+        return AudioAnswerView(
+          key: key,
+          questionStep: this,
+          result: questionResult as AudioQuestionResult?,
         );
       default:
         throw AnswerFormatNotDefinedException();

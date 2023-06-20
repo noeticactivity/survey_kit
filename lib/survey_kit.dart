@@ -81,3 +81,7 @@ export 'src/CustomSteps/feedback_submission_widget.dart';
 export 'src/CustomSteps/text_and_audio_answer_format.dart';
 export 'src/CustomSteps/text_and_audio_answer_view.dart';
 export 'src/CustomSteps/text_and_audio_question_result.dart';
+export 'src/CustomSteps/audio_answer_format.dart';
+export 'src/CustomSteps/audio_answer_view.dart';
+export 'src/CustomSteps/audio_question_result.dart';
+export 'src/CustomSteps/audio_recorder_page.dart';

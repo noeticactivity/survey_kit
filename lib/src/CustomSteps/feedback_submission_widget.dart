@@ -5,14 +5,17 @@ import 'package:flutter/widgets.dart';
 class FeedbackSubmissionStep extends InstructionStep {
   String title = 'title';
   String text = 'text';
+  StepIdentifier id;
   //final InstructionStep feedbackStep;
 
   FeedbackSubmissionStep({
     required this.title,
     required this.text,
-    //required this.feedbackStep,
-    required StepIdentifier id,
-  }) : super(title: "feedbackStep.title", text: "feedbackStep.text");
+    required this.id,
+  }) : super(
+            title: "feedbackStep.title",
+            text: "feedbackStep.text",
+            stepIdentifier: id);
 
   @override
   List<Object?> get props => [title, text];
@@ -20,7 +23,7 @@ class FeedbackSubmissionStep extends InstructionStep {
   @override
   material.Widget createView(
       {required QuestionResult<dynamic>? questionResult}) {
-    return FeedbackSubmission();
+    return FeedbackSubmission(feedbackSubmissionId: id);
   }
 
   @override
@@ -31,9 +34,12 @@ class FeedbackSubmissionStep extends InstructionStep {
 }
 
 class FeedbackSubmission extends material.StatelessWidget {
-  final DateTime _startDate = DateTime.now();
+  StepIdentifier feedbackSubmissionId;
+  DateTime _startDate;
 
   //FeedbackSubmission();
+  FeedbackSubmission({required this.feedbackSubmissionId})
+      : _startDate = DateTime.now();
 
   @override
   material.Widget build(material.BuildContext context) {
@@ -43,6 +49,8 @@ class FeedbackSubmission extends material.StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           material.Expanded(
+              child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: FeedBackSubmissionStepView(
               title: material.Text(
                 "Would you like to provide additional feedback based on the previous section?", //FIXME: Replace with variable
@@ -51,7 +59,7 @@ class FeedbackSubmission extends material.StatelessWidget {
               ),
               resultFunction: () => InstructionStepResult(
                 Identifier(
-                    id: "feedbackSubmissionStep.stepIdentifier"), //FIXME: Replace with variable
+                    id: feedbackSubmissionId.id), //FIXME: Replace with variable
                 _startDate,
                 DateTime.now(),
               ),
@@ -64,7 +72,7 @@ class FeedbackSubmission extends material.StatelessWidget {
                 ),
               ),
             ),
-          ),
+          )),
         ],
       ),
     );

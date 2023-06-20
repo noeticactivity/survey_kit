@@ -41,9 +41,10 @@ class CompletionView extends StatelessWidget {
                         assetPath,
                         repeat: false,
                       )
-                    : Lottie.asset(
-                        'assets/fancy_checkmark.json',
-                        package: 'survey_kit',
+                    : LottieBuilder.network(
+                        'https://assets7.lottiefiles.com/datafiles/qojl0Ru04es0pqq/data.json',
+                        width: 150.0,
+                        height: 150.0,
                         repeat: false,
                       ),
               ),

@@ -33,38 +33,42 @@ class StepView extends StatelessWidget {
       child: Container(
         color: Theme.of(context).colorScheme.background,
         child: Center(
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 32.0),
-                  child: title,
-                ),
-                child,
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 32.0),
-                  child: OutlinedButton(
-                    onPressed: isValid || step.isOptional
-                        ? () =>
-                            surveyController.nextStep(context, resultFunction)
-                        : null,
-                    child: Text(
-                      step.buttonText?.toUpperCase() ??
-                          context
-                              .read<Map<String, String>?>()?['next']
-                              ?.toUpperCase() ??
-                          'Next',
-                      style: TextStyle(
-                        color: isValid
-                            ? Theme.of(context).primaryColor
-                            : Colors.grey,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+                horizontal: 20.0), // Add horizontal padding here
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 32.0),
+                    child: title,
+                  ),
+                  child,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 32.0),
+                    child: OutlinedButton(
+                      onPressed: isValid || step.isOptional
+                          ? () =>
+                              surveyController.nextStep(context, resultFunction)
+                          : null,
+                      child: Text(
+                        step.buttonText?.toUpperCase() ??
+                            context
+                                .read<Map<String, String>?>()?['next']
+                                ?.toUpperCase() ??
+                            'Next',
+                        style: TextStyle(
+                          color: isValid
+                              ? Theme.of(context).primaryColor
+                              : Colors.grey,
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

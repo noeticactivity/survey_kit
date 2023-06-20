@@ -1,7 +1,11 @@
 import 'package:amorc_survey_kit_local/src/CustomSteps/audio_answer_format.dart';
 import 'package:amorc_survey_kit_local/src/CustomSteps/audio_question_result.dart';
+import 'package:amorc_survey_kit_local/src/CustomSteps/audio_recorder_page.dart';
 import 'package:amorc_survey_kit_local/survey_kit.dart'; //TODO: See if the full surver_kit.dart import is superflous or excessive
 import 'package:flutter/material.dart';
+import 'package:flutter_sound/public/flutter_sound_player.dart';
+import 'package:flutter_sound/public/flutter_sound_recorder.dart';
+import 'package:flutter/foundation.dart';
 
 class AudioAnswerView extends StatefulWidget {
   final QuestionStep questionStep;
@@ -24,6 +28,11 @@ class _AudioAnswerViewState extends State<AudioAnswerView> {
 
   late final TextEditingController _controller;
   bool _isValid = false;
+
+  final GlobalKey<AudioRecorderPageState> _recorderPageKey =
+      GlobalKey<AudioRecorderPageState>();
+  final FlutterSoundRecorder? recorder = FlutterSoundRecorder();
+  final FlutterSoundPlayer? player = FlutterSoundPlayer();
 
   @override
   void initState() {
@@ -57,12 +66,16 @@ class _AudioAnswerViewState extends State<AudioAnswerView> {
   Widget build(BuildContext context) {
     return StepView(
       step: widget.questionStep,
-      resultFunction: () => TextQuestionResult(
+      resultFunction: () => AudioQuestionResult(
+        //FIXME: Replace into AudioQuestionResult
         id: widget.questionStep.stepIdentifier,
         startDate: _startDate,
         endDate: DateTime.now(),
         valueIdentifier: _controller.text,
-        result: _controller.text,
+        result: AudioResult(), //_controller.text,
+        mp3Data: Uint8List(1),
+        textInput: '' //FIXME: REMOVE
+        ,
       ),
       title: widget.questionStep.title.isNotEmpty
           ? Text(
@@ -71,33 +84,24 @@ class _AudioAnswerViewState extends State<AudioAnswerView> {
               textAlign: TextAlign.center,
             )
           : widget.questionStep.content,
-      isValid: _isValid || widget.questionStep.isOptional,
+      //isValid: _isValid || widget.questionStep.isOptional, //FIXME: Make the button valid if user has recording
+      isValid: true,
       child: Column(
         children: [
-          Padding(
-            padding:
-                const EdgeInsets.only(bottom: 32.0, left: 14.0, right: 14.0),
-            child: Text(
-              widget.questionStep.text,
-              style: Theme.of(context).textTheme.bodyMedium,
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 50.0,
-            child: TextField(
-              textInputAction: TextInputAction.next,
-              autofocus: true,
-              decoration: textFieldInputDecoration(
-                hint: _textAnswerFormat.hint,
+          if (widget.questionStep.text.isNotEmpty)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 0.0),
+              child: Text(
+                widget.questionStep.text,
+                style: Theme.of(context).textTheme.bodyMedium,
+                textAlign: TextAlign.center,
               ),
-              controller: _controller,
-              textAlign: TextAlign.center,
-              onChanged: (String text) {
-                _checkValidation(text);
-              },
             ),
+          AudioRecorderPage(
+            //FIXME: Change Color of time from black to primary
+            key: _recorderPageKey,
+            recorder: recorder,
+            player: player,
           ),
         ],
       ),

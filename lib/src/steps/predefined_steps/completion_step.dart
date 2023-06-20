@@ -16,11 +16,12 @@ class CompletionStep extends Step {
   CompletionStep(
       {bool isOptional = false,
       required StepIdentifier stepIdentifier,
-      String buttonText = 'End Survey',
+      String buttonText = 'End Survey', //FIXME: LOCALIZE THIS
       bool showAppBar = true,
       required this.title,
       required this.text,
-      this.assetPath = ""})
+      this.assetPath =
+          ''}) //FIXME: This url wont work on other machines. Need to find a way to refer to it by the package bundle
       : super(
           stepIdentifier: stepIdentifier,
           isOptional: isOptional,

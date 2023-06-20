@@ -12,7 +12,7 @@ abstract class Step {
   @JsonKey(defaultValue: false)
   final bool isOptional;
   @JsonKey(defaultValue: 'Next')
-  final String? buttonText;
+  String? buttonText;
   final bool canGoBack;
   final bool showProgress;
   final bool showAppBar;
@@ -20,7 +20,7 @@ abstract class Step {
   Step({
     StepIdentifier? stepIdentifier,
     this.isOptional = false,
-    this.buttonText = 'Next',
+    String? buttonText = 'Next',
     this.canGoBack = true,
     this.showProgress = true,
     this.showAppBar = true,
