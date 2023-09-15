@@ -31,24 +31,24 @@ class CompletionView extends StatelessWidget {
               style: Theme.of(context).textTheme.bodyMedium,
               textAlign: TextAlign.center,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 32.0),
-              child: Container(
-                width: 150.0,
-                height: 150.0,
-                child: assetPath.isNotEmpty
-                    ? Lottie.asset(
-                        assetPath,
-                        repeat: false,
-                      )
-                    : LottieBuilder.network(
-                        'https://assets7.lottiefiles.com/datafiles/qojl0Ru04es0pqq/data.json',
-                        width: 150.0,
-                        height: 150.0,
-                        repeat: false,
-                      ),
-              ),
-            )
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(vertical: 32.0),
+            //   child: Container(
+            //     width: 150.0,
+            //     height: 150.0,
+            //     child: assetPath.isNotEmpty
+            //         ? Lottie.asset(
+            //             assetPath,
+            //             repeat: false,
+            //           )
+            //         : LottieBuilder.network(
+            //             'https://assets7.lottiefiles.com/datafiles/qojl0Ru04es0pqq/data.json',
+            //             width: 150.0,
+            //             height: 150.0,
+            //             repeat: false,
+            //           ),
+            //   ),
+            // )
           ],
         ),
       ),

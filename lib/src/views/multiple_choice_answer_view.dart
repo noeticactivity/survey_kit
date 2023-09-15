@@ -10,11 +10,13 @@ import 'package:amorc_survey_kit_local/src/views/widget/step_view.dart';
 class MultipleChoiceAnswerView extends StatefulWidget {
   final QuestionStep questionStep;
   final MultipleChoiceQuestionResult? result;
+  final String hintText;
 
   const MultipleChoiceAnswerView({
     Key? key,
     required this.questionStep,
     required this.result,
+    required this.hintText,
   }) : super(key: key);
 
   @override
@@ -32,8 +34,8 @@ class _MultipleChoiceAnswerView extends State<MultipleChoiceAnswerView> {
     super.initState();
     _multipleChoiceAnswer =
         widget.questionStep.answerFormat as MultipleChoiceAnswerFormat;
-    _selectedChoices =
-        widget.result?.result ?? _multipleChoiceAnswer.defaultSelection;
+    _selectedChoices = List.from(
+        widget.result?.result ?? _multipleChoiceAnswer.defaultSelection);
     _startDateTime = DateTime.now();
   }
 
@@ -118,6 +120,7 @@ class _MultipleChoiceAnswerView extends State<MultipleChoiceAnswerView> {
                             if (v.isEmpty && otherTextChoice != null) {
                               _selectedChoices.remove(otherTextChoice);
                             } else if (v.isNotEmpty) {
+                              //Fixme: NEEDS LOCALIZATION
                               final updatedTextChoice =
                                   TextChoice(text: 'Other', value: v);
                               if (otherTextChoice == null) {
@@ -132,7 +135,8 @@ class _MultipleChoiceAnswerView extends State<MultipleChoiceAnswerView> {
                         decoration: InputDecoration(
                           labelText: 'Other',
                           labelStyle: Theme.of(context).textTheme.headlineSmall,
-                          hintText: 'Write other information here',
+                          hintText:
+                              widget.hintText, //'Write other information here',
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                         ),
                       ),

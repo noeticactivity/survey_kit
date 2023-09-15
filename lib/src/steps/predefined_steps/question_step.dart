@@ -59,11 +59,15 @@ class QuestionStep extends Step {
   final Widget content;
   final AnswerFormat answerFormat;
 
+  @JsonKey(defaultValue: '')
+  final String otherFieldHintText;
+
   QuestionStep({
     bool isOptional = false,
     String buttonText = 'Next',
     StepIdentifier? stepIdentifier,
     bool showAppBar = true,
+    this.otherFieldHintText = 'Write other information here',
     this.title = '',
     this.text = '',
     this.content = const SizedBox.shrink(),
@@ -110,6 +114,7 @@ class QuestionStep extends Step {
           key: key,
           questionStep: this,
           result: questionResult as MultipleChoiceQuestionResult?,
+          hintText: otherFieldHintText,
         );
       case ScaleAnswerFormat:
         return ScaleAnswerView(
