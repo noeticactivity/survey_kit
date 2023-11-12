@@ -14,6 +14,7 @@ QuestionStep _$QuestionStepFromJson(Map<String, dynamic> json) => QuestionStep(
           : StepIdentifier.fromJson(
               json['stepIdentifier'] as Map<String, dynamic>),
       showAppBar: json['showAppBar'] as bool? ?? true,
+      otherFieldHintText: json['otherFieldHintText'] as String? ?? '',
       title: json['title'] as String? ?? '',
       text: json['text'] as String? ?? '',
       answerFormat:
@@ -29,4 +30,5 @@ Map<String, dynamic> _$QuestionStepToJson(QuestionStep instance) =>
       'title': instance.title,
       'text': instance.text,
       'answerFormat': instance.answerFormat,
+      'otherFieldHintText': instance.otherFieldHintText,
     };

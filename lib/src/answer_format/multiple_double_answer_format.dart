@@ -9,11 +9,11 @@ class MultipleDoubleAnswerFormat implements AnswerFormat {
   final List<MultiDouble>? defaultValues;
   @JsonKey(defaultValue: const [])
   final List<String> hints;
+  final String type;
 
-  const MultipleDoubleAnswerFormat({
-    this.defaultValues,
-    required this.hints,
-  }) : super();
+  const MultipleDoubleAnswerFormat(
+      {this.defaultValues, required this.hints, this.type = 'multiple_double'})
+      : super();
 
   factory MultipleDoubleAnswerFormat.fromJson(Map<String, dynamic> json) =>
       _$MultipleDoubleAnswerFormatFromJson(json);

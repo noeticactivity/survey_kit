@@ -8,6 +8,7 @@ class TextAnswerFormat implements AnswerFormat {
   final int? maxLines;
   @JsonKey(defaultValue: '')
   final String hint;
+  final String type;
 
   /// Regular expression by which the text gets validated
   /// default: '^(?!\s*$).+' that checks if the entered text is empty
@@ -17,11 +18,12 @@ class TextAnswerFormat implements AnswerFormat {
   @JsonKey(defaultValue: '^(?!\s*\$).+')
   final String? validationRegEx;
 
-  const TextAnswerFormat({
-    this.maxLines,
-    this.hint = '',
-    this.validationRegEx = '^(?!\s*\$).+',
-  }) : super();
+  const TextAnswerFormat(
+      {this.maxLines,
+      this.hint = '',
+      this.validationRegEx = '^(?!\s*\$).+',
+      this.type = 'text'})
+      : super();
 
   factory TextAnswerFormat.fromJson(Map<String, dynamic> json) =>
       _$TextAnswerFormatFromJson(json);

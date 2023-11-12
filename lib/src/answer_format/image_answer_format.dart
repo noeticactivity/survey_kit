@@ -7,11 +7,11 @@ part 'image_answer_format.g.dart';
 class ImageAnswerFormat implements AnswerFormat {
   final String? defaultValue;
   final String buttonText;
+  final String type;
 
-  const ImageAnswerFormat({
-    this.defaultValue,
-    this.buttonText = 'Image: ',
-  }) : super();
+  const ImageAnswerFormat(
+      {this.defaultValue, this.buttonText = 'Image: ', this.type = 'file'})
+      : super();
 
   factory ImageAnswerFormat.fromJson(Map<String, dynamic> json) =>
       _$ImageAnswerFormatFromJson(json);

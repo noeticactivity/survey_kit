@@ -6,11 +6,11 @@ part 'multi_double.g.dart';
 class MultiDouble {
   final String text;
   final double value;
+  final String type;
 
-  MultiDouble({
-    required this.text,
-    required this.value,
-  }) : super();
+  MultiDouble(
+      {required this.text, required this.value, this.type = 'multi_double'})
+      : super();
 
   factory MultiDouble.fromJson(Map<String, dynamic> json) =>
       _$MultiDoubleFromJson(json);

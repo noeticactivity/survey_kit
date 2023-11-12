@@ -14,11 +14,11 @@ class DateAnswerFormat implements AnswerFormat {
   /// Highest date which can be selected via the datepicker
   final DateTime? maxDate;
 
-  DateAnswerFormat({
-    this.defaultDate,
-    this.minDate,
-    this.maxDate,
-  })  : assert(minDate == null || maxDate == null || minDate.isBefore(maxDate)),
+  final String type;
+
+  DateAnswerFormat(
+      {this.defaultDate, this.minDate, this.maxDate, this.type = 'date'})
+      : assert(minDate == null || maxDate == null || minDate.isBefore(maxDate)),
         assert(defaultDate == null ||
             minDate == null ||
             defaultDate.isAtSameMomentAs(minDate) ||

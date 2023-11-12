@@ -9,11 +9,11 @@ part 'double_answer_format.g.dart';
 class DoubleAnswerFormat implements AnswerFormat {
   final double? defaultValue;
   final String hint;
+  final String type;
 
-  const DoubleAnswerFormat({
-    this.defaultValue,
-    this.hint = '',
-  }) : super();
+  const DoubleAnswerFormat(
+      {this.defaultValue, this.hint = '', this.type = 'double'})
+      : super();
 
   factory DoubleAnswerFormat.fromJson(Map<String, dynamic> json) =>
       _$DoubleAnswerFormatFromJson(json);

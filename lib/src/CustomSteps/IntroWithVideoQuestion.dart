@@ -82,11 +82,6 @@ class InstructionViewWithVideo extends material.StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          //FIXME: TEMP Removing the video
-          // YoutubePlayer(
-          //   controller: _controller,
-          //   aspectRatio: 16 / 9,
-          // ),
           material.Image.asset(
             'assets/AMORC_Symbol.png',
             width: 200,
@@ -110,95 +105,6 @@ class InstructionViewWithVideo extends material.StatelessWidget {
                 padding: const material.EdgeInsets.symmetric(horizontal: 14.0),
                 child: material.Text(
                   instructionStep.text,
-                  style: material.Theme.of(context).textTheme.bodyMedium,
-                  textAlign: material.TextAlign.center,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-////////////////////////////////////////////////
-
-class LanguageSelectionStep extends QuestionStep {
-  final String title = 'title';
-  final String text = 'text';
-  final QuestionStep languageStep; // Assuming this is a property
-  final List<TextChoice> languageChoices;
-
-  LanguageSelectionStep(
-      {required StepIdentifier id,
-      required this.languageStep,
-      required this.languageChoices})
-      : super(
-            title: languageStep.title,
-            text: languageStep.text,
-            answerFormat:
-                SingleChoiceAnswerFormat(textChoices: languageChoices));
-
-  @override
-  List<Object?> get props => [title, text, languageStep];
-
-  @override
-  material.Widget createView(
-      {required QuestionResult<dynamic>? questionResult}) {
-    return LanguageSelectionView(
-      languageStep: languageStep,
-    );
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    // TODO: implement toJson
-    throw UnimplementedError();
-  }
-}
-
-class LanguageSelectionView extends material.StatelessWidget {
-  final QuestionStep languageStep;
-  final DateTime _startDate = DateTime.now();
-
-  LanguageSelectionView({required this.languageStep});
-
-  @override
-  material.Widget build(material.BuildContext context) {
-    return material.Container(
-      child: material.Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          //FIXME: TEMP Removing the video
-          // YoutubePlayer(
-          //   controller: _controller,
-          //   aspectRatio: 16 / 9,
-          // ),
-          material.Image.asset(
-            'assets/AMORC_Symbol.png',
-            width: 200,
-            height: 300,
-            //fit: BoxFit.cover,
-          ),
-          material.Expanded(
-            child: StepView(
-              step: languageStep,
-              title: material.Text(
-                languageStep.title,
-                style: material.Theme.of(context).textTheme.displayMedium,
-                textAlign: material.TextAlign.center,
-              ),
-              resultFunction: () => InstructionStepResult(
-                languageStep.stepIdentifier,
-                _startDate,
-                DateTime.now(),
-              ),
-              child: material.Padding(
-                padding: const material.EdgeInsets.symmetric(horizontal: 14.0),
-                child: material.Text(
-                  languageStep.text,
                   style: material.Theme.of(context).textTheme.bodyMedium,
                   textAlign: material.TextAlign.center,
                 ),

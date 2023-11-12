@@ -17,6 +17,9 @@ MultipleChoiceAnswerFormat _$MultipleChoiceAnswerFormatFromJson(
               .toList() ??
           [],
       otherField: json['otherField'] as bool? ?? false,
+      maxAnswers: json['maxAnswers'] as int? ?? 100,
+      otherFieldHintText: json['otherFieldHintText'] as String? ?? 'Other',
+      type: json['type'] as String? ?? 'multiple',
     );
 
 Map<String, dynamic> _$MultipleChoiceAnswerFormatToJson(
@@ -25,4 +28,7 @@ Map<String, dynamic> _$MultipleChoiceAnswerFormatToJson(
       'textChoices': instance.textChoices,
       'defaultSelection': instance.defaultSelection,
       'otherField': instance.otherField,
+      'maxAnswers': instance.maxAnswers,
+      'otherFieldHintText': instance.otherFieldHintText,
+      'type': instance.type,
     };

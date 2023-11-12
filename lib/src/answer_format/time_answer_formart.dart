@@ -8,10 +8,9 @@ part 'time_answer_formart.g.dart';
 class TimeAnswerFormat implements AnswerFormat {
   @_TimeOfDayJsonConverter()
   final TimeOfDay? defaultValue;
+  final String type;
 
-  const TimeAnswerFormat({
-    this.defaultValue,
-  }) : super();
+  const TimeAnswerFormat({this.defaultValue, this.type = 'time'}) : super();
 
   factory TimeAnswerFormat.fromJson(Map<String, dynamic> json) =>
       _$TimeAnswerFormatFromJson(json);

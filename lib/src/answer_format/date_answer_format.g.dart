@@ -17,6 +17,7 @@ DateAnswerFormat _$DateAnswerFormatFromJson(Map<String, dynamic> json) =>
       maxDate: json['maxDate'] == null
           ? null
           : DateTime.parse(json['maxDate'] as String),
+      type: json['type'] as String? ?? 'date',
     );
 
 Map<String, dynamic> _$DateAnswerFormatToJson(DateAnswerFormat instance) =>
@@ -24,4 +25,5 @@ Map<String, dynamic> _$DateAnswerFormatToJson(DateAnswerFormat instance) =>
       'defaultDate': instance.defaultDate?.toIso8601String(),
       'minDate': instance.minDate?.toIso8601String(),
       'maxDate': instance.maxDate?.toIso8601String(),
+      'type': instance.type,
     };
