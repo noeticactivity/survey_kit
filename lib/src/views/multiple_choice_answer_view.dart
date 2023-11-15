@@ -121,8 +121,10 @@ class _MultipleChoiceAnswerView extends State<MultipleChoiceAnswerView> {
                               _selectedChoices.remove(otherTextChoice);
                             } else if (v.isNotEmpty) {
                               //Fixme: NEEDS LOCALIZATION
-                              final updatedTextChoice =
-                                  TextChoice(text: 'Other', value: v);
+                              final updatedTextChoice = TextChoice(
+                                  text:
+                                      _multipleChoiceAnswer.otherFieldHintText,
+                                  value: v);
                               if (otherTextChoice == null) {
                                 _selectedChoices.add(updatedTextChoice);
                               } else if (currentIndex != null) {
@@ -133,7 +135,7 @@ class _MultipleChoiceAnswerView extends State<MultipleChoiceAnswerView> {
                           });
                         },
                         decoration: InputDecoration(
-                          labelText: 'Other',
+                          labelText: _multipleChoiceAnswer.otherFieldHintText,
                           labelStyle: Theme.of(context).textTheme.headlineSmall,
                           hintText:
                               widget.hintText, //'Write other information here',
