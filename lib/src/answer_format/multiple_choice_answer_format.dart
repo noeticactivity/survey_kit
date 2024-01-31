@@ -9,23 +9,43 @@ class MultipleChoiceAnswerFormat implements AnswerFormat {
   final List<TextChoice> textChoices;
   @JsonKey(defaultValue: const [])
   final List<TextChoice> defaultSelection;
+
   @JsonKey(defaultValue: false)
   final bool otherField;
+
+  final String otherFieldLocalizedValue;
+
+  @JsonKey()
+  final String otherFieldHintText;
+
+  @JsonKey(defaultValue: false)
+  final bool inLineTextEntryField;
+
+  final String inLineTextEntryFieldLocalizedValue;
+
+  @JsonKey()
+  final String inLineTextEntryFieldHintText;
+
   @JsonKey(defaultValue: 100)
   final int maxAnswers;
-
-  @JsonKey(defaultValue: 'Other')
-  final String otherFieldHintText;
 
   final String type;
 
   const MultipleChoiceAnswerFormat(
-      {required this.textChoices,
-      this.defaultSelection = const [],
-      this.otherField = false,
-      this.maxAnswers = 100,
-      this.otherFieldHintText = 'Other',
-      this.type = 'multiple'})
+      {this.otherField = false, // Default value set to false
+      this.otherFieldLocalizedValue =
+          '', // Default value set to an empty string
+      this.otherFieldHintText = '', // Default value set to an empty string
+      this.inLineTextEntryField = false, // Default value set to false
+      this.inLineTextEntryFieldLocalizedValue =
+          '', // Default value set to an empty string
+      this.inLineTextEntryFieldHintText =
+          '', // Default value set to an empty string
+      required this.textChoices,
+      this.defaultSelection =
+          const [], // No default value specified, so it's null by default
+      this.type = 'multiple', // Default value set to 'single'
+      this.maxAnswers = 100})
       : super();
 
   factory MultipleChoiceAnswerFormat.fromJson(Map<String, dynamic> json) =>

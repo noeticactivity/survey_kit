@@ -87,6 +87,80 @@ class _SingleChoiceAnswerViewState extends State<SingleChoiceAnswerView> {
                     );
                   },
                 ).toList(),
+
+                // Add the "other" option field if enabled
+                if (_singleChoiceAnswerFormat.otherField) ...[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                    child: ListTile(
+                      title: TextField(
+                        onChanged: (value) {
+                          setState(() {
+                            if (value.isNotEmpty) {
+                              _selectedChoice = TextChoice(
+                                text: _singleChoiceAnswerFormat
+                                    .otherFieldHintText,
+                                value: value,
+                              );
+                            } else {
+                              // Clear selection if input is empty
+                              if (_selectedChoice?.text ==
+                                  _singleChoiceAnswerFormat
+                                      .otherFieldHintText) {
+                                _selectedChoice = null;
+                              }
+                            }
+                          });
+                        },
+                        decoration: InputDecoration(
+                          labelText: _singleChoiceAnswerFormat
+                              .otherFieldLocalizedValue,
+                          hintText: _singleChoiceAnswerFormat
+                              .otherFieldHintText, //'Write other information here',
+                          floatingLabelBehavior: FloatingLabelBehavior.always,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Divider(color: Colors.grey),
+                ],
+
+                // Add any extra in-line option field if enabled
+                if (_singleChoiceAnswerFormat.inLineTextEntryField) ...[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                    child: ListTile(
+                      title: TextField(
+                        onChanged: (value) {
+                          setState(() {
+                            if (value.isNotEmpty) {
+                              _selectedChoice = TextChoice(
+                                text: _singleChoiceAnswerFormat
+                                    .otherFieldHintText,
+                                value: value,
+                              );
+                            } else {
+                              // Clear selection if input is empty
+                              if (_selectedChoice?.text ==
+                                  _singleChoiceAnswerFormat
+                                      .otherFieldHintText) {
+                                _selectedChoice = null;
+                              }
+                            }
+                          });
+                        },
+                        decoration: InputDecoration(
+                          labelText: _singleChoiceAnswerFormat
+                              .inLineTextEntryFieldLocalizedValue,
+                          hintText: _singleChoiceAnswerFormat
+                              .inLineTextEntryFieldHintText, //'Write other information here',
+                          floatingLabelBehavior: FloatingLabelBehavior.always,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Divider(color: Colors.grey),
+                ],
               ],
             ),
           ],

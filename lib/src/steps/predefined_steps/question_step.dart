@@ -59,18 +59,36 @@ class QuestionStep extends Step {
   final Widget content;
   final AnswerFormat answerFormat;
 
-  @JsonKey(defaultValue: '')
+  @JsonKey(defaultValue: false)
+  final bool otherField;
+
+  final String otherFieldLocalizedValue;
+
+  @JsonKey()
   final String otherFieldHintText;
+
+  @JsonKey(defaultValue: false)
+  final bool inLineTextEntryField;
+
+  final String inLineTextEntryFieldLocalizedValue;
+
+  @JsonKey()
+  final String inLineTextEntryFieldHintText;
 
   QuestionStep({
     bool isOptional = false,
     String buttonText = 'Next',
     StepIdentifier? stepIdentifier,
     bool showAppBar = true,
-    this.otherFieldHintText = 'Write other information here',
+    this.otherFieldHintText = '', //'Write other information here',
     this.title = '',
     this.text = '',
     this.content = const SizedBox.shrink(),
+    this.otherField = false,
+    this.otherFieldLocalizedValue = '',
+    this.inLineTextEntryField = false,
+    this.inLineTextEntryFieldHintText = '',
+    this.inLineTextEntryFieldLocalizedValue = '',
     required this.answerFormat,
   }) : super(
           stepIdentifier: stepIdentifier,

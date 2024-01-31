@@ -107,7 +107,9 @@ class _MultipleChoiceAnswerView extends State<MultipleChoiceAnswerView> {
                           int? currentIndex;
                           final otherTextChoice = _selectedChoices
                               .firstWhereIndexedOrNull((index, element) {
-                            final isOtherField = element.text == 'Other';
+                            //FIXME: CHECK FOR LOCALIZED VALUE, NOT JUST "Other"
+                            final isOtherField = element.text ==
+                                _multipleChoiceAnswer.otherFieldLocalizedValue;
 
                             if (isOtherField) {
                               currentIndex = index;
@@ -147,6 +149,57 @@ class _MultipleChoiceAnswerView extends State<MultipleChoiceAnswerView> {
                   Divider(
                     color: Colors.grey,
                   ),
+                ],
+                // Add any extra in-line option field if enabled
+                if (_multipleChoiceAnswer.inLineTextEntryField) ...[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                    child: ListTile(
+                      title: TextField(
+                        onChanged: (value) {
+                          int? currentIndex;
+                          final inLineTextChoice = _selectedChoices
+                              .firstWhereIndexedOrNull((index, element) {
+                            //FIXME: CHECK FOR LOCALIZED VALUE, NOT JUST "Other"
+                            final isInLineField = element.text ==
+                                _multipleChoiceAnswer
+                                    .inLineTextEntryFieldLocalizedValue;
+
+                            if (isInLineField) {
+                              currentIndex = index;
+                            }
+
+                            return isInLineField;
+                          });
+
+                          setState(() {
+                            if (value.isEmpty && inLineTextChoice != null) {
+                              _selectedChoices.remove(inLineTextChoice);
+                            } else if (value.isNotEmpty) {
+                              final updatedTextChoice = TextChoice(
+                                  text:
+                                      _multipleChoiceAnswer.otherFieldHintText,
+                                  value: value);
+                              if (inLineTextChoice == null) {
+                                _selectedChoices.add(updatedTextChoice);
+                              } else if (currentIndex != null) {
+                                _selectedChoices[currentIndex!] =
+                                    updatedTextChoice;
+                              }
+                            }
+                          });
+                        },
+                        decoration: InputDecoration(
+                          labelText: _multipleChoiceAnswer
+                              .inLineTextEntryFieldLocalizedValue,
+                          hintText: _multipleChoiceAnswer
+                              .inLineTextEntryFieldHintText,
+                          floatingLabelBehavior: FloatingLabelBehavior.always,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Divider(color: Colors.grey),
                 ],
               ],
             ),
